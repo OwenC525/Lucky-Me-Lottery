@@ -2,3 +2,10 @@
     padding-left: 25px;
     padding-right: 25px;
 }
+
+.header {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    margin-top: 10px;
+}
