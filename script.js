@@ -36,6 +36,26 @@ function displayNames () {
       nameList.appendChild(li) // Append the list item to the list
     }
   }
+
+
+  function pickRandomName() {
+    const randomNameDiv = document.getElementById('randomName')
+    randomNameDiv.textContent = ''
+
+    //select random mane from names array
+    const randomNumber = Math.floor(Math.random() * namesArray.length)
+    const randomName = namesArray[randomNumber]
+
+    randomNameDiv.textContent = randomName
+
+    namesArray.splice(randomNumber, 1)
+
+    displayNames();
+    
+  }
   
   // Event listener for the button click
   document.getElementById('addNameBtn').addEventListener('click', addName) // Attach the addName function to the button click event
+
+  // Event listener for the button click to select and display a rndm name
+  document.getElementById('pickRandomBtn').addEventListener('click', pickRandomName) // Attach the addName function to the button click event
